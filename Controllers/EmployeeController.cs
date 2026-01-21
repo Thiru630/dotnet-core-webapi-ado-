@@ -31,7 +31,7 @@ namespace EmployeeService.Controllers
          return Ok(e);
          else
          {
-            return BadRequest();
+            return BadRequest("check the input");
          }
      }
      [HttpGet]
@@ -56,7 +56,7 @@ namespace EmployeeService.Controllers
          if(res>0)
          return Ok("updated successfully");
          else
-         return NotFound("employee not found");
+         return BadRequest("check the input");
       }
   }
 }
