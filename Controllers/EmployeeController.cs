@@ -47,7 +47,7 @@ namespace EmployeeService.Controllers
          if(res>0)
          return Ok("deleted successfully");
          else
-         return BadRequest();
+         return NotFound("employee not found");
      }
       [HttpPut]
       public IActionResult Update(Employee e)
@@ -56,7 +56,7 @@ namespace EmployeeService.Controllers
          if(res>0)
          return Ok("updated successfully");
          else
-         return BadRequest();
+         return NotFound("employee not found");
       }
   }
 }
